@@ -99,23 +99,30 @@ body {
     display: none;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
-.mobile-navbar .mobile-navbar-header {
+.mobile-navbar .toggle-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 2000;
+    z-index: 1001;
 }
 
+.toggle-button button {
+    color: black;
+    text-decoration: none;
+}
+    
 .mobile-navbar-toggle {
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 2000;
 }
 
 .mobile-navbar-menu {
@@ -177,6 +184,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 8rem;
     margin-bottom: 12rem;
     z-index: 10;
@@ -213,62 +221,30 @@ body {
     height: 24px; /* Set the desired height */
 }
 
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .about-title {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 56rem;
-    margin: 2rem auto;
-}
-
 .about-section {
-    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.7px);
+    -webkit-backdrop-filter: blur(2.8px);
+    border: 1px solid rgba(255, 255, 255, 0.79);
+    margin: 1rem;
+    padding: 2rem;
+    max-width: 40rem;
 }
-
-.wrapper {
-    width: 100%;
-    overflow: hidden;
-}
-
-.about-detail {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.paragraph {
-    width: 100%;
-    flex-shrink: 0;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-button {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-    background: none;
-    border: none;
-    color: #2563eb;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-button:hover {
-    color: #1e40af;
-}
-
-.chevron {
-    width: 20px;
-    height: 20px;
-}
-
 
 
