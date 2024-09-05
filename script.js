@@ -10,27 +10,33 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Mobile navbar functionality
-const toggleButton = document.querySelector('.mobile-navbar-toggle');
-const menu = document.querySelector('.mobile-navbar-menu');
-const overlay = document.querySelector('.mobile-navbar-overlay');
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const menu = document.querySelector('.mobile-navbar-menu');
+    const overlay = document.querySelector('.mobile-navbar-overlay');
 
-function closeMenu() {
-    menu.classList.remove('open');
-    overlay.classList.remove('visible');
-}
+    function toggleMenu() {
+        hamburgerButton.classList.toggle('open');
+        menu.classList.toggle('open');
+        overlay.classList.toggle('visible');
+    }
 
-toggleButton.addEventListener('click', function() {
-    menu.classList.toggle('open');
-    overlay.classList.toggle('visible');
+    function closeMenu() {
+        hamburgerButton.classList.remove('open');
+        menu.classList.remove('open');
+        overlay.classList.remove('visible');
+    }
+
+    hamburgerButton.addEventListener('click', toggleMenu);
+
+    // Close menu when a link is clicked
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when clicking outside
+    overlay.addEventListener('click', closeMenu);
 });
-
-// Close menu when a link is clicked
-const menuLinks = menu.querySelectorAll('a');
-menuLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
-
-// Close menu when clicking outside
-overlay.addEventListener('click', closeMenu);
 
 
