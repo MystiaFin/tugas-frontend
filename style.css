@@ -277,7 +277,7 @@ body {
   height: 24px; /* Set the desired height */
 }
 
-.about-container {
+.parent-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,4 +301,62 @@ body {
   margin: 1rem;
   padding: 2rem;
   max-width: 40rem;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 12rem;
+}
+
+.about-section img {
+  width: 150px;
+  height: 150px;
+}
+
+.projects {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.7px);
+  -webkit-backdrop-filter: blur(2.8px);
+  border: 1px solid rgba(255, 255, 255, 0.79);
+  margin: 1rem;
+  padding: 2rem;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 12rem;
+}
+
+.projects .icon {
+  margin-right: 1rem;
+}
+
+.projects .menus {
+  flex-grow: 1;
+}
+
+.projects ul {
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.projects li {
+  padding: 0.5rem;
+}
+
+.projects a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.projects .icon img {
+  width: 150px;
+  height: 150px;
 }
